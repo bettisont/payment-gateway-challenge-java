@@ -11,7 +11,7 @@ import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
-//possibly make this into an 'validator' interface, which cardValidator can implement
+//todo possibly make this into an 'validator' interface, which cardValidator can implement
 @Service
 public class CardDetailsValidatorService {
 

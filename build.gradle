@@ -21,7 +21,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-  // https://mvnrepository.com/artifact/org.meanbean/meanbean
     testImplementation group: 'org.meanbean', name: 'meanbean', version: '2.0.3'
 }
 

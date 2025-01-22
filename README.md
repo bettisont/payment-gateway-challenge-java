@@ -43,12 +43,17 @@ For documentation openAPI is included, and it can be found under the following u
 - Integration tests: tested end to end payment scenarios in PaymentGatewayControllerTest
 - Unit tests: mocked behaviour of dependencies for PaymentGatewayServiceTest, input validation tests in PostPaymentRequestTest
 - meanbean: used for beanTesting the getters and setters of Java beans
+- used a BaseTest class to define common testing objects. Not all test classes inherit, but it's used in places.
 
 ### Security
 - card numbers are not persisted
 
 ### Error handling 
 - custom exceptions - BankCommunicationException for bank errors, CardPaymentProcessingException. Allows for easy debugging in case of errors
+
+### Config
+- application.properties file used to provide the url to the bank sim
+
 
 ## Assumptions
 1. In-memory storage is sufficient 
