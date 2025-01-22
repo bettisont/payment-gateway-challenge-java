@@ -12,6 +12,9 @@ public class GetPaymentResponse {
   private String currency;
   private int amount;
 
+  public GetPaymentResponse() {
+  }
+
   public UUID getId() {
     return id;
   }

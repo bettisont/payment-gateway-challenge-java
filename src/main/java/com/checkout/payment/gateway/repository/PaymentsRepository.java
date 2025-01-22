@@ -11,8 +11,9 @@ public class PaymentsRepository {
 
   private final HashMap<UUID, PostPaymentResponse> payments = new HashMap<>();
 
-  public void add(PostPaymentResponse payment) {
+  public PostPaymentResponse add(PostPaymentResponse payment) {
     payments.put(payment.getId(), payment);
+    return payment;
   }
 
   public Optional<PostPaymentResponse> get(UUID id) {
