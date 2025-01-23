@@ -26,7 +26,7 @@ public class CardDetailsValidatorService {
     validateExpiryIsInFuture(paymentRequest.getExpiryYear(), paymentRequest.getExpiryMonth());
   }
 
-  private List<PaymentValidationError> processValidationErrors(BindingResult bindingResult) {
+  private List<PaymentValidationError> mapBindingResultToPaymentValidationObjects(BindingResult bindingResult) {
     List<PaymentValidationError> paymentValidationErrors = new ArrayList<>();
     bindingResult.getFieldErrors().forEach(fieldError -> paymentValidationErrors.add(
         new PaymentValidationError(
@@ -40,7 +40,7 @@ public class CardDetailsValidatorService {
   }
 
   public void handleValidationErrors(BindingResult bindingResult) {
-    List<PaymentValidationError> paymentValidationErrors = processValidationErrors(bindingResult);
+    List<PaymentValidationError> paymentValidationErrors = mapBindingResultToPaymentValidationObjects(bindingResult);
     throw new InvalidPaymentDetailsException("Payment validation failure", paymentValidationErrors);
   }
 
